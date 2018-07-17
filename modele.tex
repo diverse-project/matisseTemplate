@@ -5,6 +5,15 @@
 \usepackage{graphicx}
 \usepackage{fullpage}
 \usepackage{eso-pic}
+\usepackage[overlay,absolute]{textpos}
+\usepackage{textcomp}
+
+\newcommand\PlaceText[3]{%
+\begin{textblock*}{10in}(#1,#2)  %% change width of box from 10in as you wish
+#3
+\end{textblock*}
+}%
+
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\blap}[1]{\vbox to 0pt{#1\vss}}
 \newcommand\AtUpperLeftCorner[3]{%
@@ -30,15 +39,64 @@
 \begin{titlepage}
 \enlargethispage{2cm}
 \AddToShipoutPicture{
-\AtUpperLeftCorner{0cm}{0cm}{\includegraphics{data/back.jpg}}
+\AtUpperLeftCorner{0cm}{0cm}{\includegraphics{data/MathStic-UR1.pdf}}
 }
 \vspace*{3cm}
 
+{
+\fontfamily{phv}\selectfont 
+\PlaceText{0.2cm}{5.7cm}{\Huge \scshape Thèse de doctorat de}
+\PlaceText{0.2cm}{9.5cm}{\Large L'UNIVERSITÉ DE RENNES 1} % L'INSA RENNES
+\PlaceText{0.2cm}{10.2cm}{\large \scshape Comue Université Bretagne Loire}
+\PlaceText{0.2cm}{11.3cm}{\scshape Ecole Doctorale n° 601}
+\PlaceText{0.2cm}{11.8cm}{\textit{Mathématiques et Sciences et Technologies}}
+\PlaceText{0.2cm}{12.2cm}{\textit{de l'Information et de la Communication}}
+\PlaceText{0.2cm}{12.6cm}{Spécialité : \textit{Informatique}}
+\PlaceText{0.76cm}{13cm}{Par}
+\PlaceText{0.76cm}{13.5cm}{\huge \textbf{Prénom NOM}}
+\PlaceText{0.76cm}{14.6cm}{\Large \textbf{Titre long de la thèse}}
+\PlaceText{0.76cm}{16.8cm}{\textbf{Thèse présentée et soutenue à Rennes, le dd.mm.yyyy}}
+\PlaceText{0.76cm}{17.2cm}{\textbf{Unité de recherche : IRISA – UMR6074}}
+\PlaceText{0.76cm}{17.7cm}{\textbf{Thèse N° :}}
 
-\placetextbox{0.2}{0.81}{\Huge\textsf{Thèse de doctorat}}%
+\PlaceText{3.4cm}{19.5cm}{\large \textbf{Rapporteurs avant soutenance :}}
+\PlaceText{10.5cm}{19.5cm}{\large \textbf{Composition du Jury :}}
 
-\placetextbox{0.2}{0.73}{\Huge\textsf{This is my text.}}%
+\PlaceText{1cm}{20.2cm}{\color{gray} Prénom NOM}
+\PlaceText{5.7cm}{20.2cm}{\color{gray} Professeur des universités}
+\PlaceText{6.47cm}{20.7cm}{\color{gray} Université de Rennes}
 
+\PlaceText{1cm}{21.2cm}{\color{gray} Prénom NOM}
+\PlaceText{5.7cm}{21.2cm}{\color{gray} Professeur des universités}
+\PlaceText{6.47cm}{21.7cm}{\color{gray} Université de Rennes}
+
+\PlaceText{10.5cm}{20.2cm}{\color{gray} Rapporteurs}
+\PlaceText{10.5cm}{20.7cm}{\color{gray} Prénom NOM}
+\PlaceText{15cm}{20.7cm}{\color{gray} Professeur des universités}
+\PlaceText{15cm}{21.2cm}{\color{gray} Université de Rennes}
+
+\PlaceText{10.5cm}{21.7cm}{\color{gray} Prénom NOM}
+\PlaceText{15cm}{21.7cm}{\color{gray} Professeur des universités}
+\PlaceText{15cm}{22.2cm}{\color{gray} Université de Rennes}
+
+\PlaceText{10.5cm}{23cm}{\color{gray} Examinateurs}
+\PlaceText{10.5cm}{23.5cm}{\color{gray} Prénom NOM}
+\PlaceText{15cm}{23.5cm}{\color{gray} Professeur des universités}
+\PlaceText{15cm}{24cm}{\color{gray} Université de Rennes}
+\PlaceText{10.5cm}{24.5cm}{\color{gray} Prénom NOM}
+\PlaceText{15cm}{24.5cm}{\color{gray} Professeur des universités}
+\PlaceText{15cm}{25cm}{\color{gray} Université de Rennes}
+
+\PlaceText{10.5cm}{25.8cm}{\color{gray} Directeur de thèse}
+\PlaceText{10.5cm}{26.3cm}{\color{gray} Prénom NOM}
+\PlaceText{15cm}{26.3cm}{\color{gray} Professeur des universités}
+\PlaceText{15cm}{26.8cm}{\color{gray} Université de Rennes}
+
+\PlaceText{10.5cm}{27.6cm}{\color{gray} Encadrant}
+\PlaceText{10.5cm}{28.1cm}{\color{gray} Prénom NOM}
+\PlaceText{15cm}{28.1cm}{\color{gray} Professeur des universités}
+\PlaceText{15cm}{28.6cm}{\color{gray} Université de Rennes}
+}
 
 %\begin{center}
 %\vspace*{10cm}
